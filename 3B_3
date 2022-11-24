@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+//WAP to find one’s complement of a binary number.
+int main()
+{
+    int number, rev, a;
+    printf("Enter a binary number:");
+    scanf("%d", &number);
+    for(rev=0; number!=0; number=number/10)
+    {
+        a=number%10;
+        if(a==1)
+        {
+            a=0;
+        }
+        else if(a==0)
+        {
+            a=1;
+        }
+        rev=rev*10+a;
+    }
+    for(; rev!=0; rev=rev/10)
+    {
+        a=rev%10;
+        printf("%d", a);
+    }
+}
